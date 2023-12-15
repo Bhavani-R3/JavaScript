@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>unshift() and shift()</h3>
+    <!-- unshift(value) add new item at beginning position
+         shift() remove item from beginning -->
+
+         <script>
+            var x = ['blue', 'white'];
+            document.write(`<h3> before unshift = ${ x } </h3>`);
+            x.unshift("pink");
+            document.write(`<h3> after unshift = ${ x } </h3>`);
+            x.unshift("megenta");
+            document.write(`<h3> after unshift = ${ x } </h3>`);
+            x.shift();
+            document.write(`<h3> after shift = ${ x } </h3>`);
+            x.shift();
+            document.write(`<h3> after shift = ${ x } </h3>`);
+         </script>
+</body>
+</html>

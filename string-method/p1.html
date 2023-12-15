@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>String Methods</h3>
+
+    <script>
+        var str = "Welcome to JavaScript end";
+
+        document.write(`<h3> charAt(index) = ${ str.charAt(6) } </h3>`);
+        document.write(`<h3> ASCII (decimal) charCodeAt(index) = ${ str.charCodeAt(6) } </h3>`);
+
+        document.write(`<h3> (first) indexOf(char) = ${ str.indexOf("e") } </h3>`);
+        document.write(`<h3> lastIndexOf(char) = ${ str.lastIndexOf("e") } </h3>`);
+
+        document.write(`<hr/>`);
+        document.write(`<h3> lowercase = ${str.toLowerCase()} </h3>`);
+        document.write(`<h3> uppercase = ${str.toUpperCase()} </h3>`);
+    </script>
+</body>
+</html>

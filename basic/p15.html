@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Const</h3>
+    <script>
+        const x = 18;
+        document.write(`<h3> before = ${ x } </h3>`);
+        // syntax error => error in code => compile error
+        // logical error => run time error => run time exceptions
+        try {
+            x = 36; /* p15.html:13 Uncaught TypeError: Assignment to constant variable. */ 
+        } catch (error) {
+            console.log(error);
+        }
+        // x = 36;
+        document.write(`<h3> after = ${ x } </h3>`);
+    </script>
+</body>
+</html>

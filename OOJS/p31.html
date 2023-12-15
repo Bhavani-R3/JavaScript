@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Get and Set</h1>
+    <script>
+        class User {
+            constructor() {
+                this.name = '';
+            }
+
+            set _name(x) {
+                this.name = x;
+            }
+
+            get _name() {
+                return this.name;
+            }
+        }
+
+        let x = new User();
+        x._name = "John";
+        document.write(`<h1> name = ${x._name} </h1>`);
+    </script>
+</body>
+</html>

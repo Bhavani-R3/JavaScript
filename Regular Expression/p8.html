@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Replacing the position of Two Words</h1>
+
+    <script>
+        var str = "Hello World";
+
+        var re = /(\w+)\s(\w+)/;
+
+        var newStr = str.replace(re, "$2, $1");
+        console.log(`new string =`, newStr);
+
+        /* \w+ -> matches any word character. the + indicates that there has to be atleast 1 word */
+    </script>
+</body>
+</html>

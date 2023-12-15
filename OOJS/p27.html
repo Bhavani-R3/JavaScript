@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Finding Even or Odd using Class</h1>
+    <form onsubmit="submitHandler(event)" name="myForm">
+        <div class="input">
+            <label for="num">Enter Number</label>
+            <input type="number" name="num" id="num" required>
+        </div>
+        <div class="input">
+            <button type="submit" class="btn">Submit</button>
+        </div>
+    </form>
+    <hr>
+    <div id="result"></div>
+
+    <script>
+        function submitHandler(event) {
+            event.preventDefault(); /* to avoid page refresh */
+            let num = Number(document.getElementById('num').value); // id
+            // document.querySelector('#num').value // #id, .class, tag
+            // document.myForm.num.value (document.formName.inputName.value)
+
+            let x1 = new EvenOdd(num);
+            document.getElementById('result').innerHTML = `<h1> ${ x1.find() } </h1>`;
+        }
+
+        class EvenOdd {
+            constructor(val) { // param
+                this.num = val;
+            }
+
+            // method 
+            find() {
+                if(this.num % 2 === 0) {
+                    return `${this.num} is even`;
+                } else {
+                    return `${this.num} is odd`;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

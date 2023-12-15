@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Split</h1>
+    <form autocomplete="off" onsubmit="submitHandler(event)">
+        <div>
+            <label for="user">Enter names (each name seperated by comma)</label>
+            <textarea name="user" id="user" cols="30" rows="5"></textarea>
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+    <script>
+        function submitHandler(e) {
+            e.preventDefault();
+            var user = document.getElementById("user").value;
+            console.log('user =', user);
+            let res = user.split(',');
+            console.log('output =', res);
+        } 
+    </script>
+</body>
+</html>

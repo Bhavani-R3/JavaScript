@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Rest Operator</h3>
+
+    <script>
+        /* 11, 22, 33, 44, 55, 66 = sum */
+        /* accepts parameter return as an array => Rest Operator (...) */
+        let sum = 0;
+        function sumofdigits(...num) {
+            console.log('num =', num); // array
+
+            num.forEach(item => {
+                sum += item;
+            })
+
+            document.write(`<h1> sum of (12,23,55,66,77,88,34,45,76) = ${sum} </h1>`);
+        }
+
+        sumofdigits(12,23,55,66,77,88,34,45,76);
+        
+    </script>
+
+</body>
+</html>

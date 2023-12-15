@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>function hoisting</h3>
+
+    <script>
+        sayHi(); // call
+
+        // definition
+        function sayHi() {
+            document.write(`<h1> Welcome to function hoisting </h1>`);
+        } 
+
+        // expression
+        /* const sayHi = () => {
+            document.write(`<h1>Welcome to const local</h1>`);
+        } */
+
+        /* const sayHi = function() {
+            document.write(`<h1>Welcome to const local</h1>`);
+        }
+        */
+
+        // Uncaught ReferenceError: Cannot access 'sayHi' before initialization
+    </script>
+</body>
+</html>

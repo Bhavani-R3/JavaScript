@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Inheritance Inside Class</h1>
+
+    <script>
+        // super class
+        class Course {
+            constructor(ti, fe) {
+                this.title = ti;
+                this.fee = fe;
+            }
+            // definition
+            getCourseDetails() {
+                document.write(`<h1> Course Name = ${this.title}, and fee = ${this.fee} </h1>`);
+            }
+
+            getTitle() {
+                document.write(`<h1> Super title = ${this.title} </h1>`);
+            }
+        }
+
+        // base class
+        class User extends Course {
+            constructor(x,y) {
+                super(x,y); // super method call refers to super class constructor
+                this.title = x;
+            }
+
+            getTitle() {
+                super.getTitle();
+                document.write(`<h1> Base title = ${this.title} </h1>`);
+            }
+        }
+
+        let x = new User("MERN", 1234);
+
+        x.getCourseDetails(); // call
+        x.getTitle();
+    </script>
+</body>
+</html>

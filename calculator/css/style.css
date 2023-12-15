@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #555;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+.title a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.calculator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50vw;
+}
+
+.calculator #answer {
+    width: 50vw;
+    padding: 12px 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #000;
+    outline: none;
+}
+
+.calculator .button-container {
+    width: 100%;
+}
+
+.button-container .btn-group {
+    display: flex;
+    resize: horizontal;
+}
+
+.btn-group .btn {
+    padding: 0.5rem;
+    flex: auto;
+    width: 5vw;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    margin: 0.2rem;
+    cursor: pointer;
+}
+
+.btn:active {
+    background-color: #777;
+}
+
+.ops {
+    background-color: orangered;
+    color: #fff;
+}
+
+.clear {
+    background-color: red;
+    color: #fff;
+}
+
+.equal {
+    background-color: green;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .calculator {
+        width: 90vw;
+    }
+
+    .calculator #answer {
+        width: 90vw;
+    }
+}

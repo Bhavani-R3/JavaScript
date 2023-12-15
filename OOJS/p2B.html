@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object create as constructor parameter</h1>
+    <script>
+         var x = new Object({
+            name: "John",
+            age: 24,
+            email: "john@gmail.com",
+            getName: function() {
+            document.write(`<h1>My name is ${this.name} </h1>`);
+            }
+         }); // x = instance of Object()
+
+        console.log('x =', x);
+
+        document.write(`<h1>name = ${x.name} </h1>`);
+        document.write(`<h1>age = ${x.age} </h1>`);
+        document.write(`<h1>email = ${x["email"]} </h1>`);
+        x.getName();
+    </script>
+</body>
+</html>

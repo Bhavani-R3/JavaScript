@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 100%;
+            overflow-x: hidden;
+            height: auto;
+            margin: 0;
+        }
+
+        #userInfo {
+            padding: 20px;
+            border: 2px solid #222;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+            grid-gap: 10px;
+        }
+
+        #userInfo div {
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            padding: 20px;
+        }
+
+        #userInfo div h3 {
+            text-transform: uppercase;
+            color: slateblue;
+        }
+
+        #userInfo div img {
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+            width: 200px;
+        }
+
+        #userInfo div a {
+            padding: 12px 14px;
+            background-color: slateblue;
+            color: #fff;
+            text-transform: capitalize;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>querySelector, createElement, textContent, appendChild</h1>
+
+    <section id="userInfo"></section>
+
+    <script>
+        var users = [
+            {
+                //key: value
+                id: 1,
+                name: "rajesh",
+                image: "https://picsum.photos/id/123/300/300",
+                email: "rajesh@gmail.com",
+                isAdmin: false
+            },
+            {
+                id: 2,
+                name: "prema",
+                image: "https://picsum.photos/id/124/300/300",
+                email: "prema@gmail.com",
+                isAdmin: true
+            },
+            {
+                id: 3,
+                name: "suresh",
+                image: "https://picsum.photos/id/126/300/300",
+                email: "suresh@gmail.com",
+                isAdmin: false
+            },
+            {
+                id: 4,
+                name: "john",
+                image: "https://picsum.photos/id/128/300/300",
+                email: "john@gmail.com",
+                isAdmin: true
+            }
+        ];
+
+        console.log('users =', users);
+
+        var container = document.querySelector('#userInfo');
+        
+        users.forEach(function(val,index){
+            // create html elements
+        let card = document.createElement('div');
+        let eImage = document.createElement('img');
+        let eName = document.createElement('h3');
+        let eEmail = document.createElement('p');
+        let eisAdmin = document.createElement('p');
+        let eLink = document.createElement('a');
+
+        // add contents / data to the element
+        eImage.src = val.image;
+        eImage.alt = "No Image";
+        eName.textContent = `${val.id} ${val.name}`;
+        eEmail.textContent = val.email;
+        eisAdmin.textContent = val.isAdmin ? "Admin": "User";
+        eLink.href = val.image;
+        eLink.textContent = "image link";
+        eLink.target = "_blank";
+
+        // appending the childs to parent element
+        card.appendChild(eImage);
+        card.appendChild(eName);
+        card.appendChild(eEmail);
+        card.appendChild(eisAdmin);
+        card.appendChild(eLink);
+
+        container.appendChild(card);
+        });
+    </script>
+</body>
+</html>

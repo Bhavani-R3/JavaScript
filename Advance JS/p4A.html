@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Generator functions</h3>
+    <script>
+        function* courses() {
+            yield "Html";
+            yield "Css";
+            yield "JavaScript";
+            yield "React";
+        }
+
+        console.log('Courses', courses());
+
+        for(let item of courses()) {
+            document.write(`<h3> ${item} </h3>`);
+        }
+    </script>
+</body>
+</html>

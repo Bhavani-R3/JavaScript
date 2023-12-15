@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #block {
+            display: grid;
+            grid-template-columns: repeat(3, 485px);
+            grid-gap: 10px;
+        }
+
+        article {
+            background-color: blue;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Comments API</h3>
+    <section id="block"></section>
+
+    <script>
+        fetch(`https://jsonplaceholder.typicode.com/comments`)
+       .then(response => response.json())
+       .then(res => {
+        console.log('res =', res);
+        print(res);
+       }).catch(err => console.log(err.message));
+
+       
+       let blk = document.querySelector("#block");
+
+       function print(data) {
+        data.forEach(item => {
+            let card = document.createElement('article');
+
+            let na = document.createElement('h3');
+            let em = document.createElement('h4')
+            let bo = document.createElement('p');
+
+            na.textContent = item.name;
+            em.textContent = item.email;
+            bo.textContent = item.body;
+
+            card.appendChild(na);
+            card.appendChild(em);
+            card.appendChild(bo);
+
+            blk.appendChild(card);
+        });
+       }
+    </script>
+</body>
+</html>

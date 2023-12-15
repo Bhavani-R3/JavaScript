@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Armstrong number 153, 371</h3>
+    <button onclick="armStrongNum()">Gen</button>
+    <button onclick="findArmStrong()">Find</button>
+
+    <script>
+        function armStrongNum() {
+            for(i=1; i<10; ++i) {
+                for(j=0; j<10; ++j) {
+                    for(k=0; k<10; ++k) {
+                        var pow = (Math.pow(i,3) + Math.pow(j,3) + Math.pow(k,3));
+                        var p = (i * 100+ j * 10 + k);
+                        if(pow === p) {
+                            document.write(`<h2> ${ p } is an armstrong number </h2>`);
+                        }
+                    }
+                }
+            }
+        }
+
+        var sum = 0;
+
+        function findArmStrong() {
+            var a = prompt("Enter Number?");
+            var x = Number(a);
+
+            var temp = x;
+
+            while(temp > 0) {
+                var rem = temp % 10;
+                console.log('rem =',rem);
+                sum += rem * rem * rem;
+                console.log('sum =',sum);
+                temp = parseInt(temp/10);
+                console.log('temp =',temp); 
+            }
+
+            if(sum === x) {
+                document.write(`<h2> ${ sum } is an armstrong number </h2>`);
+            } else {
+                document.write(`<h2> ${ sum } is not an armstrong number </h2>`);
+            }
+        }
+    </script>
+</body>
+</html>

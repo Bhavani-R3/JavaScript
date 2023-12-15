@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3> write protect the values</h3>
+
+    <script>
+        // "user strict"
+        var user = {
+            email: "john@gmail.com"
+        };
+
+        Object.defineProperty(user,"name", {
+            value: "John",
+            writable: false // true -> writable, false -> readable (write protect) (default)
+         });
+
+         console.log('before name=', user);
+
+         user.name = "Mohan"; // assignment
+         user.email = "mohan12@gmail.com";
+
+         console.log('after name =', user);
+    </script>
+</body>
+</html>

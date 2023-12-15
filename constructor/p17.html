@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>min and max with out values</h3>
+    <p>check console.log for output</p>
+
+    <script>
+        var x = Math.min();
+        console.log('min =', x); // infinity
+
+        var x1 = Math.max();
+        console.log('max =', x1); // -infinity
+
+        var r1 = x > x1;
+        var r2 = x < x1;
+        var r3 = x === x1;
+
+        console.log('r1 =', Number(r1)); // 1
+        console.log('r2 =', Number(r2)); // 0
+        console.log('r3 =', Number(r3)); // 0
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>.innerHtml and .innerText</h3>
+
+    <div id="blk"></div>
+    <div id="blk1"></div>
+    <hr>
+
+    <h2 id="txt1"></h2>
+
+    <script>
+        document.getElementById("blk").innerHTML = "<h1>this is inner html content</h1>";
+        document.getElementById("blk1").innerText = "<h1>this is inner html content</h1>";
+
+        document.getElementById("txt1").innerText = "welcome to javascript";
+        document.getElementById("txt1").style.backgroundColor = "deepskyblue";
+        document.getElementById("txt1").style.padding = "20px";
+        document.getElementById("txt1").style.textAlign = "center";
+    </script>
+</body>
+</html>

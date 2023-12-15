@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Email validation with regular expression</h1>
+
+    <form autocomplete="off" method="post">
+        <div>
+            <label for="email">Email id</label>
+            <input type="email" name="email" id="email" onkeyup="validateEmail()">
+            <span id="status"></span>
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+    <script>
+        function validateEmail() {
+            let email = document.getElementById("email").value;
+            let status = document.getElementById("status");
+              // name@domain.ext
+            let re = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+
+            if(re.test(email)) {
+                status.innerText = "Valid Email id";
+                status.style.color = "green";
+            } else {
+                status.innerText = "Invalid Email id";
+                status.style.color = "orangered";
+            }
+        }
+    </script>
+</body>
+</html>

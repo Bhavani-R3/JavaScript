@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>String Methods in Date Constructor</h3>
+    <script>
+        var today = new Date();
+        console.log('today =', today);
+
+        document.write(`<h3> ${ today.toDateString() } </h3>`);
+        document.write(`<h3> ${ today.toLocaleDateString() } </h3>`);
+
+        document.write(`<h3> ${ today.toTimeString() } </h3>`);
+        document.write(`<h3> ${ today.toLocaleTimeString() } </h3>`);
+
+        document.write(`<h3> ${ Date.now() } ms </h3>`);
+    </script>
+</body>
+</html>

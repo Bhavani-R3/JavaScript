@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Inheritance Inside Class</h1>
+
+    <script>
+        // Non parameter super class
+        class Course {
+            constructor() {
+                this.title = "Java fullstack";
+                this.fee = 1245;
+            }
+    
+            getCourseDetails() {
+                document.write(`<h1> Course Name = ${this.title}, and fee = ${this.fee} </h1>`);
+            }
+        }
+
+        // base class
+        class User extends Course {
+            constructor() {
+                super(); // super method call, super class constructor
+            }
+        }
+
+        let x = new User();
+
+        x.getCourseDetails(); 
+    </script>
+</body>
+</html>

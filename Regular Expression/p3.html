@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>exec()</h1>
+
+    <p>it return an array of captures. or null if there is no match</p>
+
+    <script>
+        var re = /a/g;
+        var result;
+        console.log('input is =', 'barbatbaz');
+
+        while((result = re.exec('barbatbaz')) !== null) {
+            console.log('re =', re);
+            console.log(`found: '${result[0]}', next exec starts at '${re.lastIndex}'`);
+        }
+
+    </script>
+
+    <script>
+        var re1 = /that/gi;
+        var inp = "In BST, values are ordered so that each node THAT descends to the left side of its parent must have a value less than its parent, and each node That descends to the right side of its parent must have a value bigger than its parent.";
+
+        var result1;
+
+        while((result1 = re1.exec(inp)) !== null) {
+            // console.log('re1 =', re1);
+            console.log(`found: '${result1[0]}', next exec starts at '${re1.lastIndex}'`);
+        }
+    </script>
+</body>
+</html>

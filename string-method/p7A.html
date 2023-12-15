@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>localeCompare()</h1>
+
+    <script>
+        var a = "hello";
+        var b = "world";
+        var c = "hello";
+
+        console.log('a > b', b.localeCompare(a)); // world > hello
+        console.log('a < b', a.localeCompare(b)); // hello < world
+        console.log('a === c', a.localeCompare(c)); // hello === hello
+    </script>
+</body>
+</html>

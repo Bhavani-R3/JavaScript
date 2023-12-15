@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Write some content inside input and then select and copy it</h3>
+    <h2> clipboard event or format event </h2>
+     <!--
+        copy => ctrl+c, paste => ctrl+v, cut => ctrl+x
+       -->
+
+    <form action="">
+        <label for="">Enter some content</label>
+        <input type="text" name="first" id="first" onselect="sel()" oncopy="cop()">
+        <br> <br>
+
+        <textarea name="" id="" cols="30" rows="10" onpaste="pas()" oncut="cut()"></textarea>
+    </form>
+
+    <script>
+        function sel() {
+            alert("content has selected");
+        }
+        function cop() {
+            alert("content has copied");
+        }
+        function pas() {
+            alert("content pasted");
+        }
+        function cut() {
+            alert("you have cut the content, paste it");
+        }
+    </script>
+</body>
+</html>

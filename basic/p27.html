@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+    <h3>  Object Array </h3>
+    <script>
+        var x = {}; // empty object
+        var y = {
+            id: 1,
+            name: "John"
+        };
+
+        var users = [
+        {
+            //key:value => property
+            id: 1,
+            name: "Raju",
+            email: "raju@gmail.com"
+        },
+        {
+            id: 2,
+            name: "pooja",
+            email: "pooja@gmail.com"
+        },
+        {
+            id: 3,
+            name: "chandu",
+            email: "chandu@gmail.com"
+        }
+    ];
+
+    for(i=0; i< users.length; i++) {
+        document.write(`<h3> id = ${users[i].id} </h3>`); // name.key
+        document.write(`<h3> name = ${users[i].name} </h3>`);
+        document.write(`<h3> email = ${users[i].email} </h3>`);
+    };
+    </script>
+</body>
+</html>

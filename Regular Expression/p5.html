@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>split()</h1>
+
+    <script>
+        var str = "How is $everything g$oing?";
+
+        const re = " ";
+        var reg = /\$e|\$o/; // | pipe (or)
+
+        console.log(`${str.split(re)}`);
+        console.log(`${str.split(reg)}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Comparing string Lexicographically</h3>
+
+    <!-- 
+        a and b ,
+        a > b = 1
+        a < b = -1
+        a === b = 0
+     -->
+
+     <script>
+
+        function strCompare(a,b) {
+            if(a === b) {
+                return 0;
+            }
+            if(a > b) {
+                return 1;
+            }
+                return -1;
+        }
+
+        console.log('a === b', strCompare("hello", "hello"));
+        console.log('a > b', strCompare("starWorld", "hellowelcometojavascript"));
+        console.log('a < b', strCompare("hello", "world"));
+     </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>String Methods</h3>
+
+    <script>
+        var str = "Welcome to javascript and we are learning JAVASCRIPT string methods";
+
+        document.write(`<h3> ${ str } </h3>`);
+
+        document.write(`<h3> ${ str.replace("javascript", "JS") } </h3>`);
+        document.write(`<h3> ${ str.replace(/javascript/gi, "JS") } </h3>`); // in any case
+        
+        // gi => global case insensitive
+        /* /string/ -> regular expression statement */
+    </script>
+</body>
+</html>

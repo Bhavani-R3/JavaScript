@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <section class="container">
+        <div class="row">
+            <div class="title">
+                <h3>CRUD (local storage)</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <div class="card-body">
+                    <form autocomplete="off" method="post" onsubmit="updateHandler(event)">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" class="form-item" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" class="form-item" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mobile">Mobile</label>
+                            <input type="number" name="mobile" id="mobile" class="form-item">
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-warning" type="submit">Update User</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/update.js"></script>
+</body>
+</html>

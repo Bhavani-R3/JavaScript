@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Window Objects</h3>
+    <button onclick="alertHandler()">Alert</button>
+    <button onclick="promptHandler()">Prompt</button>
+    <button onclick="confirmHandler()">Confirm</button>
+
+    <script>
+        /* alert, prompt, confirm, open, close => BOM (browser object model) */
+        function alertHandler() {
+            window.alert("alert message");
+        }
+
+        function promptHandler() {
+            var a = window.prompt("Enter your name?");
+            alert(`My name is ${ a }`);
+        }
+
+        function confirmHandler() {
+            var x = window.confirm("Are you sure to delete a file?");
+            /* ok -> true, cancel -> false */
+            if(x) {
+                alert("file deleted successfully");
+            } else {
+                alert("Oops!.. sorry file delete terminated")
+            }
+        }
+    </script>
+</body>
+</html>

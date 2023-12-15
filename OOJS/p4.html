@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Object methods</h3>
+
+    <script>
+        // Object.getPrototypeOf(clone object) -> return the prototype (properties) of cloned object
+
+        const user = {
+            name: "Raj",
+            email: "raj@gmail.com",
+            mobile: "9966884455",
+            age: 25
+        };
+
+        const user1 = Object.create(user);
+
+        console.log('user1 =',user1);
+
+        let result = Object.getPrototypeOf(user1); 
+        console.log('getProtypeOf() =', result);
+    </script>
+</body>
+</html>

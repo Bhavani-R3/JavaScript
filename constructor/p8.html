@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Object</h3>
+    <button onclick="handler()">Forward</button>
+    
+    <script>
+        var x = []; // array
+        var y = {}; // object
+    </script>
+    <script>
+        var user = {
+            // key: value, => property
+            name: "Raj",
+            email: "raj@gmail.com",
+            age: 33,
+            isView: true,
+            hobbies: ["driving", "riding"]
+        };
+
+        console.log('user =', user);
+
+        document.write(`<h3> name = ${ user } </h3>`); // cann't destructure an object = [object Object]
+        document.write(`<h3> name = ${ user.name } </h3>`); // object.key
+        document.write(`<h3> name = ${ user['email'] } </h3>`); // object['key']
+
+        
+        function handler() {
+            history.back();
+        }
+    </script>
+</body>
+</html>

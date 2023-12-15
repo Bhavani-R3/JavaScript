@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Object.defineProperty() in strict mode</h3>
+    <script>
+        "use strict"; // javascript strict mode
+
+        var user = {
+            name: "Suresh"
+        };
+
+        // creating property for obj externally
+        Object.defineProperty(user, "age", {
+            value: 30,
+            writable: false 
+        });
+
+        console.log('age =', user.age);
+
+        try {
+            user.age = 32; 
+        } catch(error) {
+            console.log(error);
+        }
+
+        console.log('after age =', user.age);
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #block {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+        #block div {
+            width: 300px;
+            margin: 5px;
+            box-shadow: 12px 2px 30px rgba(0, 0, 0, 0.1) , 12px 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        #block div:hover {
+            transform: scale(1.1);
+        }
+        #block div img {
+            max-width: 100%;
+            object-fit: cover;
+            object-position: center;
+            width: 250px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <section id="block"></section>
+
+    <script>
+        fetch(`https://dummyjson.com/products?limit=100`)
+       .then(res => res.json())
+       .then(out => {
+        console.log('output =', out);
+        printData(out.products);
+       }).catch(err => console.log(err.message));
+
+       let block = document.querySelector('#block');
+
+       function printData(data) {
+        data.forEach(item => {
+            let card = document.createElement('div');
+            let title = document.createElement('h1');
+            let image = document.createElement('img')
+            let price = document.createElement('p');
+
+            title.textContent = item.title;
+            image.src = item.thumbnail;
+            price.textContent = item.price;
+
+            card.appendChild(title);
+            card.appendChild(image);
+            card.appendChild(price);
+
+            block.appendChild(card);
+        });
+       }
+    </script>
+</body>
+</html>

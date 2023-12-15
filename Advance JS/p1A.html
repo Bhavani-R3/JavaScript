@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        #blk {
+            background-color: slateblue;
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            border: none;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        #blk .cls {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Self triggering function</h1>
+    <dialog id="blk">
+        <button class="cls">&times;</button>
+        <h1>Welcome to Our website</h1>
+        <a href="#">Click Here to Subscribe</a>
+    </dialog>
+
+    <script>
+        let cls = document.querySelector(".cls");
+        let blk = document.querySelector("#blk");
+
+        cls.addEventListener('click', () => {
+            blk.close();
+        });
+
+        (function() {
+            setInterval(function(){
+                blk.show();
+            }, 5000);
+        })()
+    </script>
+</body>
+</html>

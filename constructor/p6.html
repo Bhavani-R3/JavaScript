@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Boolean</h3>
+    <button onclick="handler()">Forward</button>
+    <script>
+        var status = "true";
+
+        var x = new Boolean(10<12);
+        var x1 = new Boolean(10>12);
+        var x2 = new Boolean(status);
+
+        document.write(`<h3> 10 < 12 = ${ x } </h3>`);
+        document.write(`<h3> 10 > 12 = ${ x1 } </h3>`);   
+        
+        document.write(`before = ${typeof(status)}`);
+
+        function handler() {
+            history.forward();
+        }
+    </script>
+</body>
+</html>

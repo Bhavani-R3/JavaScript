@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Break specific nested loops</h1>
+    <script>
+        outerloop:
+        for(let i=0; i<3; i++) {
+            innerloop:
+            for(let j=0; j<3; j++) {
+                console.log('i =',i);
+                console.log('j =',j);
+                if(j === 1) {
+                    break outerloop;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

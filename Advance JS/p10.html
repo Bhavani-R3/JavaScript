@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Proxy Constructor</h1>
+
+    <p> new Proxy(target,handler) </p>
+    <p> target => object / function / url which we want to proxy </p>
+    <p> handler() => callback function </p>
+    <p> A Proxy in js can be used to modify the fundamental operation of the an object. A Proxy on an object is itself an object, that has traps.</p>
+    <p> Traps may be triggered when operations are performed on the proxy. (property lookup [get], function calling, modifing properties, adding properties [set], removing properties[delete])</p>
+
+    <script>
+        let user = {
+            name: "John",
+            age: 23,
+            isActive: true
+        };
+
+        const handler = {
+            get: function(obj, prop) {
+                return obj[prop] ? obj[prop] : "Requested property not exists"
+            }
+        }
+
+        const pr = new Proxy(user, handler);
+
+        console.log(`name =`, pr.name);
+        console.log(`email =`, pr.email);
+        console.log(`age =`, pr.age);
+    </script>
+</body>
+</html>

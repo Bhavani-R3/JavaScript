@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: #ccc;
+            font-family: 'Poppins',sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        #context-menu {
+            position: fixed;
+            width: 150px;
+            background-color: #111;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 5px;
+            visibility: hidden; /* comment this till you write the script */
+            z-index: 10000;
+        }
+
+        #context-menu .item {
+            text-decoration: none;
+            color: #fff;
+            padding: 8px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.4s ease;
+        }
+
+        #context-menu .item:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        #context-menu.visible {
+            visibility: visible;
+        }    
+    </style>
+</head>
+<body>
+    <div id="context-menu">
+        <a href="#" class="item">New Folder</a>
+        <a href="#" class="item">File Upload</a>
+        <a href="#" class="item">Folder Upload</a>
+        <a href="#" class="item">Google docs</a>
+        <a href="#" class="item">Google sheets</a>
+        <a href="#" class="item">Google forms</a>
+    </div>
+
+    <script>
+        const contextMenu = document.getElementById("context-menu");
+        const pageBody = document.querySelector("body");
+
+        pageBody.addEventListener("contextmenu", (e) => {
+            e.preventDefault();
+            const { clientX: mouseX, clientY: mouseY } = e;
+            console.log(`x axis = ${mouseX} : y axis = ${mouseY}`);
+
+            contextMenu.style.left = `${mouseX}px`; /* x axis */
+            contextMenu.style.top = `${mouseY}px`; /* y axis */
+
+            contextMenu.classList.add("visible");
+
+            setTimeout(function() {
+                contextMenu.classList.remove("visible");
+            }, 10000);
+        });
+    </script>
+</body>
+</html>

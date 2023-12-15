@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Function, array and objects as properties</h3>
+
+    <script>
+        var user = {
+            name: "Mohan",
+            email: "mohan@gmail.com",
+            hobbies: ['cycling', 'riding', 'driving'],
+            getName: function () {
+                document.write(`<h3> my name is = ${this.name} </h3>`);
+            },
+            getEmail: () => {
+                // this pointer is not accessable inside arrow function (function expression)
+                document.write(`<h3> my email is = ${this.email} </h3>`);
+            },
+            address: {
+                city: "Bengaluru",
+                pincode: 560089
+            },
+            getAddress: function() {
+                return this.address.city + ', pin =' + this.address.pincode; 
+            }
+        };
+
+        document.write(`<h3> object = ${user.name} </h3>`);
+        document.write(`<h3> hobbies = ${user['hobbies']} </h3>`);
+
+        user.getName();
+        user.getEmail();
+
+        document.write(`<h3> address city = ${user.address.city} </h3>`);
+        document.write(`<h3> address zip = ${user['address']['pincode']} </h3>`);
+        document.write(`<h3> address = ${user.getAddress()} </h3>`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Reverse the string using loop</h1>
+
+    <script>
+        var str = "Be-practical";
+
+        function reverseString(data) {
+            var result = '';
+           /*  for(var i = data.length -1; i >= 0; i--) {
+                result += data[i];
+                console.log(i, data[i]);
+            } */
+
+            let i = data.length - 1;
+            while( i >= 0) {
+                result += data[i];
+                --i;
+            }
+            console.log('result =', result);
+            return result;
+        }
+
+        var output = reverseString(str);
+
+        document.write(`<h1> before= ${ str } </h1>`);
+        document.write(`<h1> after= ${ output } </h1>`);
+    </script>
+</body>
+</html>

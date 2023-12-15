@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>splice(index,deleteCount,data)</h3>
+    <script>
+        var color = ['blue', 'red', 'green', 'white'];
+        document.write(`<h3> ${color} </h3>`);
+
+        color.splice(2,0,"orange","pink");
+        document.write(`<h3> ${color} </h3>`);
+
+        color.splice(3,2,"gold","deepskyblue","slateblue");
+        document.write(`<h3> ${color} </h3>`);
+
+        color.splice(2,3);
+        document.write(`<h3> ${color} </h3>`);
+    </script>
+</body>
+</html>

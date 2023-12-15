@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>forEach Loop</h1>
+
+    <script>
+        /* 
+        array.forEach(function(item) {
+            print -> item
+        }) 
+        */
+       var users = ["Raju", "John", "Ali", "Mohan"];
+
+       users.forEach((item,index) => {
+        console.log('item =',item, "index =",index);
+        document.write(`<h1> ${index} ${item} </h1>`);
+       })
+    </script>
+</body>
+</html>

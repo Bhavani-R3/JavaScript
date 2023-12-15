@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        use switch key = add,sub,mul,div,rem a and b
+    </h1>
+    <button onclick="codeHandler()">Execute Code</button>
+    <script>
+        function codeHandler() {
+            var key = prompt('Enter any one an operation value add,sub,mul,div,mod?');
+            var a = prompt('Enter value of a?');
+            var b = prompt('Enter value of b?');
+               // constructor - Number, Boolean, String, Array, Object 
+            var x = Number(a);
+            var y = Number(b);
+            var res = 0;
+            
+            switch(key) {
+                case "add":
+                        res = x + y;
+                        document.write(`<h1>Addition of 2 numbers = ${res} </h1>`);
+                        break;
+                case "sub":
+                        res = x - y;
+                        document.write(`<h1>Sub of 2 numbers = ${res} </h1>`);
+                        break;
+                case "mul":
+                        res = x * y;
+                        document.write(`<h1>Mul of 2 numbers = ${res} </h1>`);
+                        break;
+                case "div":
+                       if(x > y) {
+                        res = x / y;
+                       } else {
+                        res= y / x;
+                       }
+                    document.write(`<h1>Div of 2 numbers = ${res} </h1>`);
+                    break;
+                case "mod":
+                    if(x > y) {
+                        res = x % y;
+                       } else {
+                        res= y % x;
+                       }
+                    document.write(`<h1>Modulo of 2 numbers = ${res} </h1>`);
+                    break;
+                default: document.write(`<h1>choose proper operation</h1>`);
+            }
+        }
+    </script>
+</body>
+</html>
+

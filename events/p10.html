@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>onchange</h3>
+    <h1 id="output"></h1>
+    <form action="">
+        <label for="">Choose Language</label>
+        <select name="lang" id="lang" onchange="selHandler()">
+            <option value="null">Choose Language</option>
+            <option>Kannada</option>
+            <option value="en">English</option>
+            <option value="hi">Hindi</option>
+            <option>Telugu</option>
+        </select>
+    </form>
+
+    <script>
+        function selHandler() {
+            let lang = document.getElementById("lang").value;
+            if(lang === "null") {
+                document.getElementById('output').innerText = "No value selected";
+            } else {
+                document.getElementById('output').innerText = `you have selected ${lang}`;
+            }
+        }
+    </script>
+</body>
+</html>
