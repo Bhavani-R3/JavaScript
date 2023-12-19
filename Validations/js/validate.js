@@ -80,4 +80,43 @@ function validate(e) {
     }
 
     /* city validation */
+    if(city === "null") {
+        printError("cityErr", "Please select city name");
+    } else {
+        printError("cityErr", "")
+        cityErr = false;
+    }
+
+    /* gender validation */
+    if(gender === "") {
+        printError("genderErr", "Please select gender");
+    } else {
+        printError("genderErr", "");
+        genderErr = false;
+    }
+
+     /* lang validation */
+     if(lang.length === 0) {
+        printError("langErr", "Please select language");
+    } else {
+        printError("langErr", "");
+        langErr = false;
+    }
+
+    if((nameErr && emailErr && mobileErr && genderErr && cityErr && langErr) === false) {
+        let data = {
+            name: name,
+            email: email,
+            mobile: mobile,
+            gender: gender,
+            city: city,
+            language: lang
+        };
+        console.log('data =', data);
+    }
+}
+
+/* defining a function to display the error message */
+function printError(eleId,msg) {
+    document.getElementById(eleId).innerText = msg;
 }

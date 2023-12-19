@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let res = new Promise((resolve,reject) => {
+            resolve(new Date().toLocaleTimeString())
+
+            setTimeout(function(){
+                reject('some error message')
+            },6000)
+        })
+
+        res.then(out => {
+            setInterval(function(){
+                console.log(out)
+            },3000)
+        }).catch(err => {
+            console.log(err)
+        })
+    </script>
+</body>
+</html>

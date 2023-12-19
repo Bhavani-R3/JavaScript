@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/form.css">
 </head>
 <body>
-    <form name="cForm" onsubmit="return validate(event)" method="post">
+    <form name="cForm" onsubmit="validate(event)" method="post">
         <h2>Contact Form</h2>
         <div class="row">
             <label for="name">FullName</label>
@@ -23,7 +23,7 @@
 
         <div class="row">
             <label for="mobile">Mobile Number</label>
-            <input type="text" name="mobile" id="mobile" maxlength="10">
+            <input type="text" name="mobile" id="mobile" maxlength="15">
             <strong class="error" id="mobileErr"></strong>
         </div>
 
@@ -72,7 +72,7 @@
                     <input type="checkbox" name="lang[]" value="telugu"> Telugu
                 </label>
             </div>
-            <strong class="error" id="langrErr"></strong>
+            <strong class="error" id="langErr"></strong>
         </div>
 
         <div class="row">
