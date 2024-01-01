@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+nav {
+    padding: 0px 20px;
+    background: #64343d;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+nav a {
+    margin: 0px 14px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+table, tr, td, th {
+    border: 1px solid slateblue;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+thead tr:first-child {
+    background-color: slateblue;
+    color: #fff;
+}
+
+td,th {
+    padding: 10px 12px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-direction: column;
+}
+
+form .form-item {
+    display: flex;
+    flex-direction: column;
+}
+
+form .form-item label {
+    font-size: 1.2em;
+    color: slateblue;
+    font-weight: bold;
+}
+
+form .form-item input {
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.btn {
+    padding: 10px 12px;
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 10rem;
+}
+
+.btn-success {
+    background-color: green;
+}
+
+.btn-warning {
+    background-color: orange;
+}
+
+.btn-danger {
+    background-color: orangered;
+}

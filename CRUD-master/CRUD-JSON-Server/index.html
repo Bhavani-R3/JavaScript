@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">CRUD JSON</a>
+
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="create.html">Create</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="row">
+            <div class="title">
+                <h3>User List</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="usersList"></tbody>
+            </table>
+        </div>
+    </div>
+
+<!-- to create json server 
+    cd server
+    npm --version
+    npm i -g json-server
+    json-server --version
+    json-server --watch users.json -->
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
